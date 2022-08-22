@@ -471,7 +471,7 @@ class Super:
             #Distance
             d=Dist(Super.sql_to_df_1(a[i]),n_j,0).dist() # 1 == nombre de jour
             d_1 = Dist(Super.sql_to_df_1(a[i]),n_s,1).dist()
-            d_2 = Dist(Super.sql_to_df_1(a[i]),1,2).dist()
+            d_2 = Dist(Super.sql_to_df_1(a[i]),n_m,2).dist()
             D = [d[1],d[2],d_1[1],d_1[2],d_2[1],d_2[2]]
             #Temps M
             t = Tem(Super.sql_to_df_1(a[i]),n_j,0,x).temps()[0] # 1 == nombre de semaine , 24 == heure de la journée
