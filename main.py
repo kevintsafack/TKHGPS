@@ -315,7 +315,8 @@ try:
                         
                     with tab2:
                         st.header("Bureau 💻 ⚙️")
-                        
+                        st.subheader("Apres chaque modifation taper sur la touche 'r' ")
+                        st.warning("Si la page s'actualise, entrez vos informations")
                         # Créer une voiture
                         col_1,col_2=st.columns(2)
                         with col_1:
@@ -395,7 +396,7 @@ try:
                                             var_1 = SeparationEnJour(DataSet(r[0][0]).DataFrame()).Separe() #tableau [DataFrmae , Days Week]
                                             new_car = Super.concat(car[1],var_1[0],car[2],var_1[1])
                                             new_car_day = SeparationEnJour(new_car).Separe()[1]
-                                            Super.sq(option,new_car,new_car_day)
+                                            Super.sq_1(option,new_car,new_car_day)
                                             Super.update([option])
                                             st.success("Les données de votre voiture ont été mise à jour avec success")
                                     else :
